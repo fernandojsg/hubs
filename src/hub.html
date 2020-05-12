@@ -54,12 +54,15 @@
         light="defaultLightsEnabled: false"
     >
         <a-assets>
+            <img id="card1" crossorigin="anonymous" src="./assets/cards/king.png">
             <img id="presence-count" crossorigin="anonymous" src="./assets/hud/presence-count.png">
             <img id="action-button" crossorigin="anonymous" src="./assets/hud/action_button.9.png">
             <img id="button" crossorigin="anonymous" src="./assets/hud/button.9.png">
 
             <a-asset-item id="drawing-pen" response-type="arraybuffer" src="./assets/models/DrawingPen.glb"></a-asset-item>
             <a-asset-item id="spawn-point" response-type="arraybuffer" src="./assets/models/spawn-point.glb"></a-asset-item>
+
+            <a-asset-item id="cards-deck" response-type="arraybuffer" src="./assets/cards/cardsdeck.glb"></a-asset-item>
 
             <template id="template-waypoint-avatar">
                 <a-entity waypoint></a-entity>
@@ -96,6 +99,7 @@
 
                     <a-entity class="right-controller" matrix-auto-update></a-entity>
 
+                    <!--<a-entity gltf-model-plus="src: #desk-table;"></a-entity>-->
                     <a-entity class="model" gltf-model-plus="inflate: true">
                         <template data-name="AvatarRoot">
                             <a-entity
@@ -1301,6 +1305,12 @@
         </a-entity>
         <a-entity id="scene-preview-node">
         </a-entity>
+        <a-entity position="-2 0 4" geometry="primitive: box; width: 2; height: 0.7; depth: 2" material="color: #ff0"></a-entity>
+        <a-entity
+            carddeck
+            position="-2 0.35 4"
+        >
+
     </a-scene>
 
     <div id="ui-root"></div>

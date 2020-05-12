@@ -26,3 +26,6 @@ import "./environment-map";
 import "./trigger-volume";
 import "./video-pause-state";
 import "./particle-emitter";
+
+// cards
+import "../assets/cards/carddeck";
