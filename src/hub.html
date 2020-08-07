@@ -55,6 +55,8 @@
     >
         <a-assets>
             <img id="card1" crossorigin="anonymous" src="./assets/cards/king.png">
+            <img id="cards" crossorigin="anonymous" src="./assets/cards/unoface.png">
+
             <img id="presence-count" crossorigin="anonymous" src="./assets/hud/presence-count.png">
             <img id="action-button" crossorigin="anonymous" src="./assets/hud/action_button.9.png">
             <img id="button" crossorigin="anonymous" src="./assets/hud/button.9.png">
@@ -270,6 +272,22 @@
                             ></a-entity>
                         </a-entity>
                     </a-entity>
+                </a-entity>
+            </template>
+
+
+            <template id="interactable-card-media">
+                <a-entity
+                    class="interactable"
+                    body-helper="type: dynamic; mass: 1; collisionFilterGroup: 1; collisionFilterMask: 15;"
+                    set-unowned-body-kinematic
+                    is-remote-hover-target
+                    tags="isHandCollisionTarget: true; isHoldable: true; offersHandConstraint: true; offersRemoteConstraint: true; inspectable: true;"
+                    scalable-when-grabbed
+                    floaty-object="modifyGravityOnRelease: true; autoLockOnLoad: true;"
+                    matrix-auto-update
+                    hoverable-visuals
+                >
                 </a-entity>
             </template>
 
@@ -1307,10 +1325,25 @@
         </a-entity>
         <a-entity position="-2 0 4" geometry="primitive: box; width: 2; height: 0.7; depth: 2" material="color: #ff0"></a-entity>
         <a-entity
-            carddeck
-            position="-2 0.35 4"
-        >
-
+            carddeck="id: uno-attach;
+                      numWidth: 10;
+                      numHeight: 7;
+                      faceURL: src/assets/cards/unoface.png"
+            cardhand-attacher
+            position="-2 0.35 3"></a-entity>
+        <a-entity
+            carddeck="id: uno;
+                    numWidth: 10;
+                    numHeight: 7;
+                    faceURL: src/assets/cards/unoface.png"
+            position="-2.5 0.35 4"></a-entity>
+        <a-entity
+            cardguess
+            carddeck="id: animals;
+                      numWidth: 4;
+                      numHeight: 8;
+                      faceURL: src/assets/cards/animals.png"
+            position="-1.5 0.35 4"></a-entity>
     </a-scene>
 
     <div id="ui-root"></div>

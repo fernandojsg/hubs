@@ -1,5 +1,7 @@
 import Color from "color";
 
+console.log("In colorshift");
+
 function getColorShifter(type, color) {
   const from = type === "action" ? Color("#ff3464") : Color("#2F80ED");
   const to = Color(color);

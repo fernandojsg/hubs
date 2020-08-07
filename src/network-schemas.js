@@ -23,7 +23,10 @@ function registerNetworkSchemas() {
 
   // NAF schemas have been extended with a custom nonAuthorizedComponents property that is used to skip authorization
   // on certain components and properties regardless of hub or user permissions. See permissions-utils.js.
-
+  NAF.schemas.add({
+    template: "#interactable-card-media",
+    components: ["position", "rotation", "card"]
+  });
   NAF.schemas.add({
     template: "#remote-avatar",
     components: [

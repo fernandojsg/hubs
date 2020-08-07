@@ -22,6 +22,10 @@ function registerRootSceneComponent(componentName) {
 registerRootSceneComponent("fog");
 registerRootSceneComponent("background");
 
+AFRAME.GLTFModelPlus.registerComponent("carddeck", "carddeck");
+AFRAME.GLTFModelPlus.registerComponent("cardguess", "cardguess");
+AFRAME.GLTFModelPlus.registerComponent("cardhand-attacher", "cardhand-attacher");
+
 AFRAME.GLTFModelPlus.registerComponent("duck", "duck");
 AFRAME.GLTFModelPlus.registerComponent("quack", "quack");
 AFRAME.GLTFModelPlus.registerComponent("sound", "sound");
